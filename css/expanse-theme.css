@@ -1,0 +1,15 @@
+/* expanse-theme.css */
+body.expanse-theme {
+    background: #1f1f2e;
+    color: #e0def4;
+  }
+  
+  body.theme-transition {
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  /* clock arcs */
+  .morning-arc { stroke: #eb6f92; fill: none; stroke-width: 10; }
+  .afternoon-arc { stroke: #b48ead; fill: none; stroke-width: 10; }
+  .evening-arc { stroke: #a6e3a1; fill: none; stroke-width: 10; }
+  

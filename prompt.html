@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Log Activity</title>
+  <style>
+    body { font-family: sans-serif; padding:1rem; }
+    form { display:flex; flex-direction:column; gap:0.5rem; }
+    input { padding:0.5rem; font-size:1rem; }
+    button { padding:0.5rem 1rem; align-self:flex-end; }
+  </style>
+</head>
+<body>
+  <form id="log-form">
+    <label for="activity-input">What are you doing right now?</label>
+    <input type="text" id="activity-input" required />
+    <button type="submit">Log</button>
+  </form>
+  <script src="js/prompt-window.js"></script>
+</body>
+</html>

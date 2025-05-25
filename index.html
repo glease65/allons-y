@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allons-y Time Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#5e81ac" />
+  <link
+    id="theme-stylesheet"
+    rel="stylesheet"
+    href="css/refinement-theme.css"
+  />
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+<body class="refinement-theme">
+  <!-- Theme switcher -->
+  <button id="theme-switcher">Switch Theme</button>
+
+  <!-- Clock -->
+  <div id="clock-container"></div>
+
+  <!-- Activity prompt (inside <body>) -->
+    <div id="activity-prompt" class="hidden">
+        <!-- semi-transparent backdrop -->
+        <div class="prompt-backdrop"></div>
+        <!-- centered form card -->
+        <form id="prompt-form" class="prompt-modal">
+          <label for="prompt-input">What are you doing right now?</label>
+          <input type="text" id="prompt-input" required />
+          <button type="submit">Log</button>
+        </form>
+      </div>
+    
+
+  <!-- Controls -->
+  <div id="controls">
+    <label>
+      Active Start:
+      <select id="start-hour"></select>
+    </label>
+    <label>
+      Active End:
+      <select id="end-hour"></select>
+    </label>
+    <button id="export-btn">Export Activities</button>
+  </div>
+
+  <!-- Timeline -->
+  <ul id="timeline"></ul>
+
+  <script type="module" src="js/theme-switcher.js"></script>
+  <script type="module" src="js/clock.js"></script>
+  <script type="module" src="js/timeline.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
