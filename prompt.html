@@ -5,17 +5,29 @@
   <title>Log Activity</title>
   <style>
     body { font-family: sans-serif; padding:1rem; }
+    /* Flashing background until focused */
+    @keyframes flash-bg {
+      0%, 100% { background-color: white; }
+      50% { background-color: yellow; }
+    }
+    body.unfocused { animation: flash-bg 1s infinite; }
     form { display:flex; flex-direction:column; gap:0.5rem; }
     input { padding:0.5rem; font-size:1rem; }
     button { padding:0.5rem 1rem; align-self:flex-end; }
   </style>
 </head>
-<body>
+<body class="unfocused">
   <form id="log-form">
     <label for="activity-input">What are you doing right now?</label>
     <input type="text" id="activity-input" required />
     <button type="submit">Log</button>
   </form>
+  <script>
+    // Remove flashing when window gains focus
+    window.addEventListener('focus', () => document.body.classList.remove('unfocused'));
+    // Ensure started flashing if loses focus again
+    window.addEventListener('blur', () => document.body.classList.add('unfocused'));
+  </script>
   <script src="js/prompt-window.js"></script>
 </body>
 </html>

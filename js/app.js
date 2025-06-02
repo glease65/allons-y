@@ -57,15 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // ——— Popup logic ———
   function showPopup() {
     // opens a focused, minimal window
+    const w = window.screen.availWidth;
+    const h = window.screen.availHeight;
     const features = [
-      'width=400',
-      'height=200',
+      `width=${w}`,
+      `height=${h}`,
+      'top=0',
+      'left=0',
       'menubar=no',
       'toolbar=no',
       'location=no',
-      'status=no'
+      'status=no',
+      'resizable=no',
+      'scrollbars=no'
     ].join(',');
-    window.open('prompt.html', 'LogActivity', features);
+    const popup = window.open('prompt.html', 'LogActivity', features);
+    if (popup) popup.focus();
   }
 
   function scheduleNextPrompt() {
