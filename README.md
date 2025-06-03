@@ -1,1 +1,1 @@
-Time tracking log with a light and dark view and log is exportable into csv.
+Time tracking log with a light and dark view. Creates a log that is exportable to csv.
